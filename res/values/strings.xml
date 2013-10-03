@@ -4,4 +4,6 @@
     <string name="courses">Курсы</string>
     <string name="modules">Модули</string>
     <string name="lecture">Лекции</string>
+    <string name="terms">Термины</string>
+
 </resources>

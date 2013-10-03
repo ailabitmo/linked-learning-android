@@ -2,12 +2,15 @@ package com.ifmo.LinkedLearning.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.FragmentManager;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -30,10 +33,9 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 
 
 
-public class ModuleListActivity extends Activity implements PullToRefreshAttacher.OnRefreshListener {
+public class ModuleListActivity extends BaseActivity implements PullToRefreshAttacher.OnRefreshListener {
 
     public static final String MODULE_URI="com.ifmo.LinkedLearning.MODULE_URI";
-
 
     private static final String[] PROJECTION = {
             Contract.Modules._ID,
@@ -46,11 +48,9 @@ public class ModuleListActivity extends Activity implements PullToRefreshAttache
     private ListView listView;
     private SimpleCursorAdapter adapter;
     private PullToRefreshAttacher mPullToRefreshAttacher;
-
     private RestRequestManager requestManager;
 
     private static final int LOADER_ID = 1;
-
     private String courseURI;
 
     private LoaderManager.LoaderCallbacks<Cursor> loaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
@@ -115,7 +115,7 @@ public class ModuleListActivity extends Activity implements PullToRefreshAttache
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learning_list);
 
@@ -158,4 +158,7 @@ public class ModuleListActivity extends Activity implements PullToRefreshAttache
     public void onRefreshStarted(View view) {
         update();
     }
+
+
+
 }

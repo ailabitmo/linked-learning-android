@@ -18,9 +18,10 @@ public final class LectureOperation extends BaseOperation {
 
     @Override
     protected String buildQuery(Request request) {
-        return "SELECT ?"+ Contract.Lecture.URI+" ?"+Contract.Lecture.NAME+" ?"+Contract.Lecture.NUMBER+" WHERE { \n" +
+        return "SELECT ?"+ Contract.Lecture.URI+" ?"+Contract.Lecture.NAME+" ?"
+                +Contract.Lecture.PARENT+" ?"+Contract.Lecture.NUMBER+" WHERE { \n" +
                 "?"+Contract.Lecture.URI+" rdf:type learningRu:Lecture .\n" +
-                "<"+request.getString("moduleURI")+">"+" learningRu:hasLecture  ?"+Contract.Lecture.URI+" .\n" +
+                "?"+Contract.Lecture.PARENT+" learningRu:hasLecture  ?"+Contract.Lecture.URI+" .\n" +
                 "?"+Contract.Lecture.URI+" learningRu:numberOfLecture  ?"+Contract.Lecture.NUMBER+" .\n" +
                 "?"+Contract.Lecture.URI+" rdfs:label ?"+Contract.Lecture.NAME+" . }";
     }
@@ -31,6 +32,7 @@ public final class LectureOperation extends BaseOperation {
         values.put(Contract.Lecture.URI, object.getJSONObject(Contract.Lecture.URI).getString("value"));
         values.put(Contract.Lecture.NAME, object.getJSONObject(Contract.Lecture.NAME).getString("value"));
         values.put(Contract.Lecture.NUMBER, object.getJSONObject(Contract.Lecture.NUMBER).getString("value"));
+        values.put(Contract.Lecture.PARENT, object.getJSONObject(Contract.Lecture.PARENT).getString("value"));
         return values;
     }
 

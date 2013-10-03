@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/deps/DataDroid/DataDroid.iml" filepath="$PROJECT_DIR$/deps/DataDroid/DataDroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedLearning.iml" filepath="$PROJECT_DIR$/LinkedLearning.iml" />
       <module fileurl="file://$PROJECT_DIR$/deps/PullToRefresh/PullToRefresh.iml" filepath="$PROJECT_DIR$/deps/PullToRefresh/PullToRefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sdk/extras/android/support/v7/appcompat/appcompat.iml" filepath="$PROJECT_DIR$/../sdk/extras/android/support/v7/appcompat/appcompat.iml" />
     </modules>
   </component>
 </project>

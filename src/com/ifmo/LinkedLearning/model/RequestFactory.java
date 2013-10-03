@@ -13,8 +13,10 @@ import com.foxykeep.datadroid.requestmanager.Request;
         public static final int REQUEST_MODULES = 1;
         public static final int REQUEST_COURSES = 2;
         public static final int REQUEST_LECTURE = 3;
+        public static final int REQUEST_TERM = 4;
 
-        public static Request getCourseRequest() {
+
+    public static Request getCourseRequest() {
             Request request = new Request(REQUEST_COURSES);
             return request;
         }
@@ -31,7 +33,10 @@ import com.foxykeep.datadroid.requestmanager.Request;
             return request;
         }
 
-
+        public static Request getTermRequest() {
+            Request request = new Request(REQUEST_TERM);
+            return request;
+        }
 
         private RequestFactory() {
         }

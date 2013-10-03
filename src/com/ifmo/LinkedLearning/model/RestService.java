@@ -4,6 +4,7 @@ import com.foxykeep.datadroid.service.RequestService;
 import com.ifmo.LinkedLearning.model.operations.CourseOperation;
 import com.ifmo.LinkedLearning.model.operations.LectureOperation;
 import com.ifmo.LinkedLearning.model.operations.ModuleOperation;
+import com.ifmo.LinkedLearning.model.operations.TermOperation;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,6 +24,8 @@ public class RestService extends RequestService {
                 return new CourseOperation();
             case RequestFactory.REQUEST_LECTURE:
                 return new LectureOperation();
+            case RequestFactory.REQUEST_TERM:
+                return new TermOperation();
             default:
                 return null;
         }

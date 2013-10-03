@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import com.foxykeep.datadroid.requestmanager.Request;
@@ -29,15 +31,15 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 
 
 
-public class LectureListActivity extends Activity implements PullToRefreshAttacher.OnRefreshListener {
-
-
+public class LectureListActivity extends BaseActivity implements PullToRefreshAttacher.OnRefreshListener {
 
     private static final String[] PROJECTION = {
             Contract.Lecture._ID,
             Contract.Lecture.NAME,
             Contract.Lecture.URI,
-            Contract.Lecture.NUMBER
+            Contract.Lecture.NUMBER,
+            Contract.Lecture.PARENT
+
 
     };
 
@@ -48,6 +50,7 @@ public class LectureListActivity extends Activity implements PullToRefreshAttach
     private RestRequestManager requestManager;
 
     private static final int LOADER_ID = 3;
+    public static final String LECTURE_URI="com.ifmo.LinkedLearning.LECTURE_URI";
 
     private String moduleURI;
 
@@ -59,7 +62,7 @@ public class LectureListActivity extends Activity implements PullToRefreshAttach
                     LectureListActivity.this,
                     Contract.Lecture.CONTENT_URI,
                     PROJECTION,
-                    null,
+                    arg1.getString("SELECTION"),
                     null,
                     Contract.Lecture.NUMBER+" ASC"
             );
@@ -113,9 +116,10 @@ public class LectureListActivity extends Activity implements PullToRefreshAttach
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learning_list);
+
 
         Intent intent = getIntent();
         moduleURI = intent.getStringExtra(ModuleListActivity.MODULE_URI);
@@ -128,12 +132,26 @@ public class LectureListActivity extends Activity implements PullToRefreshAttach
                 new int[]{ R.id.module_name },
                 0);
         listView.setAdapter(adapter);
-        getLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Cursor c = ((SimpleCursorAdapter)adapterView.getAdapter()).getCursor();
+                c.moveToPosition(i);
+                String uri = c.getString(c.getColumnIndex(Contract.Modules.URI));
+                Intent intent = new Intent(view.getContext(), TermListActivity.class);
+                intent.putExtra(LECTURE_URI,uri);
+                startActivity(intent);
+            }
+        });
+
+        Bundle selection = new Bundle();
+        selection.putString("SELECTION",Contract.Lecture.PARENT+"='"+moduleURI+"'");
+        getLoaderManager().initLoader(LOADER_ID, selection, loaderCallbacks);
         requestManager = RestRequestManager.from(this);
 
         mPullToRefreshAttacher = PullToRefreshAttacher.get(this);
         mPullToRefreshAttacher.addRefreshableView(listView, this);
-        update();
     }
 
     void update() {
@@ -144,4 +162,5 @@ public class LectureListActivity extends Activity implements PullToRefreshAttach
     public void onRefreshStarted(View view) {
         update();
     }
+
 }

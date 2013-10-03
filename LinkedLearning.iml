@@ -18,6 +18,9 @@
     <orderEntry type="library" name="android-async-http-1.4.3" level="project" />
     <orderEntry type="module" module-name="DataDroid" />
     <orderEntry type="module" module-name="PullToRefresh" />
+    <orderEntry type="module" module-name="appcompat" exported="" />
+    <orderEntry type="library" name="android-support-v7-appcompat" level="project" />
+    <orderEntry type="library" name="android-support-v4" level="project" />
   </component>
 </module>
 

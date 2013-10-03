@@ -25,6 +25,7 @@ public class RestProvider extends ContentProvider {
     private static final String TABLE_MODULES = "modules";
     private static final String TABLE_COURSES = "courses";
     private static final String TABLE_LECTURES = "lectures";
+    private static final String TABLE_TERMS = "terms";
 
 
 
@@ -37,6 +38,8 @@ public class RestProvider extends ContentProvider {
     private static final int PATH_MODULES = 1;
     private static final int PATH_COURSES= 2;
     private static final int PATH_LECTURES= 3;
+    private static final int PATH_TERMS= 4;
+
 
 
     static {
@@ -44,6 +47,7 @@ public class RestProvider extends ContentProvider {
         sUriMatcher.addURI(Contract.AUTHORITY, Contract.Modules.CONTENT_PATH, PATH_MODULES);
         sUriMatcher.addURI(Contract.AUTHORITY, Contract.Course.CONTENT_PATH, PATH_COURSES);
         sUriMatcher.addURI(Contract.AUTHORITY, Contract.Lecture.CONTENT_PATH, PATH_LECTURES);
+        sUriMatcher.addURI(Contract.AUTHORITY, Contract.Term.CONTENT_PATH, PATH_TERMS);
 
 
     }
@@ -72,7 +76,17 @@ public class RestProvider extends ContentProvider {
                             Contract.Lecture._ID + " integer primary key autoincrement, " +
                             Contract.Lecture.URI + " text, " +
                             Contract.Lecture.NAME + " text, " +
-                            Contract.Lecture.NUMBER + " integer" +
+                            Contract.Lecture.NUMBER + " integer, " +
+                            Contract.Lecture.PARENT + " text" +
+                            ")";
+            db.execSQL(sql);
+
+            sql =
+                    "create table " + TABLE_TERMS + " (" +
+                            Contract.Lecture._ID + " integer primary key autoincrement, " +
+                            Contract.Lecture.URI + " text, " +
+                            Contract.Lecture.NAME + " text, " +
+                            Contract.Lecture.PARENT + " text" +
                             ")";
             db.execSQL(sql);
 
@@ -112,6 +126,11 @@ public class RestProvider extends ContentProvider {
                 cursor.setNotificationUri(getContext().getContentResolver(), Contract.Lecture.CONTENT_URI);
                 return cursor;
             }
+            case PATH_TERMS: {
+                Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_TERMS, projection, selection, selectionArgs, null, null, sortOrder);
+                cursor.setNotificationUri(getContext().getContentResolver(), Contract.Term.CONTENT_URI);
+                return cursor;
+            }
             case PATH_COURSES: {
                 Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_COURSES, projection, selection, selectionArgs, null, null, sortOrder);
                 cursor.setNotificationUri(getContext().getContentResolver(), Contract.Course.CONTENT_URI);
@@ -129,6 +148,8 @@ public class RestProvider extends ContentProvider {
                 return Contract.Modules.CONTENT_TYPE;
             case PATH_LECTURES:
                 return Contract.Lecture.CONTENT_TYPE;
+            case PATH_TERMS:
+                return Contract.Term.CONTENT_TYPE;
             case PATH_COURSES:
                 return Contract.Course.CONTENT_TYPE;
             default:
@@ -149,6 +170,11 @@ public class RestProvider extends ContentProvider {
                 getContext().getContentResolver().notifyChange(Contract.Lecture.CONTENT_URI, null);
                 break;
             }
+            case PATH_TERMS: {
+                mDatabaseHelper.getWritableDatabase().insert(TABLE_TERMS, null, values);
+                getContext().getContentResolver().notifyChange(Contract.Term.CONTENT_URI, null);
+                break;
+            }
             case PATH_COURSES: {
                 mDatabaseHelper.getWritableDatabase().insert(TABLE_COURSES, null, values);
                 getContext().getContentResolver().notifyChange(Contract.Course.CONTENT_URI, null);
@@ -165,6 +191,8 @@ public class RestProvider extends ContentProvider {
                 return mDatabaseHelper.getWritableDatabase().delete(TABLE_MODULES, selection, selectionArgs);
             case PATH_LECTURES:
                 return mDatabaseHelper.getWritableDatabase().delete(TABLE_LECTURES, selection, selectionArgs);
+            case PATH_TERMS:
+                return mDatabaseHelper.getWritableDatabase().delete(TABLE_TERMS, selection, selectionArgs);
             case PATH_COURSES:
                 return mDatabaseHelper.getWritableDatabase().delete(TABLE_COURSES, selection, selectionArgs);
             default:
@@ -180,6 +208,8 @@ public class RestProvider extends ContentProvider {
                 return mDatabaseHelper.getWritableDatabase().update(TABLE_MODULES, values, selection, selectionArgs);
             case PATH_LECTURES:
                 return mDatabaseHelper.getWritableDatabase().update(TABLE_LECTURES, values, selection, selectionArgs);
+            case PATH_TERMS:
+                return mDatabaseHelper.getWritableDatabase().update(TABLE_TERMS, values, selection, selectionArgs);
             case PATH_COURSES:
                 return mDatabaseHelper.getWritableDatabase().update(TABLE_COURSES, values, selection, selectionArgs);
             default:

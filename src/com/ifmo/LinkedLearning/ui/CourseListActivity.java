@@ -139,6 +139,8 @@ public class CourseListActivity extends Activity implements PullToRefreshAttache
 
         mPullToRefreshAttacher = PullToRefreshAttacher.get(this);
         mPullToRefreshAttacher.addRefreshableView(listView, this);
+
+
     }
 
     void update() {
