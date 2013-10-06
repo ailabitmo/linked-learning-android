@@ -1,18 +1,14 @@
 package com.ifmo.LinkedLearning.ui;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.FragmentManager;
+import android.app.Fragment;
+import android.app.ListFragment;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
@@ -34,37 +30,36 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 
 
 
-public class ModuleListActivity extends BaseActivity implements PullToRefreshAttacher.OnRefreshListener {
-
-    public static final String MODULE_URI="com.ifmo.LinkedLearning.MODULE_URI";
+public class TermListFragment extends ListFragment implements PullToRefreshAttacher.OnRefreshListener {
 
     private static final String[] PROJECTION = {
-            Contract.Modules._ID,
-            Contract.Modules.NAME,
-            Contract.Modules.URI,
-            Contract.Modules.NUMBER
+            Contract.Term._ID,
+            Contract.Term.NAME,
+            Contract.Term.URI,
+            Contract.Term.PARENT
+
 
     };
 
-    private ListView listView;
     private SimpleCursorAdapter adapter;
     private PullToRefreshAttacher mPullToRefreshAttacher;
+
     private RestRequestManager requestManager;
 
-    private static final int LOADER_ID = 1;
-    private String courseURI;
+    private static final int LOADER_ID = 4;
+
 
     private LoaderManager.LoaderCallbacks<Cursor> loaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
 
         @Override
         public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
             return new CursorLoader(
-                    ModuleListActivity.this,
-                    Contract.Modules.CONTENT_URI,
+                    TermListFragment.this.getActivity(),
+                    Contract.Term.CONTENT_URI,
                     PROJECTION,
                     null,
                     null,
-                    Contract.Modules.NUMBER+" ASC"
+                    null
             );
         }
 
@@ -91,7 +86,7 @@ public class ModuleListActivity extends BaseActivity implements PullToRefreshAtt
 
         void showError() {
             mPullToRefreshAttacher.setRefreshComplete();
-            Toast.makeText(ModuleListActivity.this, R.string.server_not_found, Toast.LENGTH_SHORT).show();
+            Toast.makeText(TermListFragment.this.getActivity(), R.string.server_not_found, Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -111,50 +106,33 @@ public class ModuleListActivity extends BaseActivity implements PullToRefreshAtt
     };
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.learning_list);
+    public void onViewCreated (View view, Bundle savedInstanceState){
 
-        Intent intent = getIntent();
-        courseURI = intent.getStringExtra(CourseListActivity.COURSE_URI);
-
-        listView = (ListView)findViewById(R.id.listView);
-        adapter = new SimpleCursorAdapter(this,
+        adapter = new SimpleCursorAdapter(this.getActivity(),
                 R.layout.learning_list_item,
                 null,
                 new String[]{ Contract.Modules.NAME },
                 new int[]{ R.id.module_name },
                 0);
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Cursor c = ((SimpleCursorAdapter)adapterView.getAdapter()).getCursor();
-                c.moveToPosition(i);
-                String uri = c.getString(c.getColumnIndex(Contract.Modules.URI));
-                Intent intent = new Intent(view.getContext(), LectureListActivity.class);
-                intent.putExtra(MODULE_URI,uri);
-                startActivity(intent);
-            }
-        });
+        setListAdapter(adapter);
 
         getLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
-        requestManager = RestRequestManager.from(this);
+        requestManager = RestRequestManager.from(this.getActivity());
 
-        mPullToRefreshAttacher = PullToRefreshAttacher.get(this);
-        mPullToRefreshAttacher.addRefreshableView(listView, this);
+//        mPullToRefreshAttacher = PullToRefreshAttacher.get(this.getActivity());
+//        mPullToRefreshAttacher.addRefreshableView(getListView(), this);
+
+        mPullToRefreshAttacher = ((MainActivity)this.getActivity()).getPullToRefreshAttacher();
+        mPullToRefreshAttacher.clearRefreshableViews();
+        mPullToRefreshAttacher.addRefreshableView(getListView(), this);
     }
 
     void update() {
-        requestManager.execute(RequestFactory.getModuleRequest(courseURI), requestListener);
+        requestManager.execute(RequestFactory.getTermRequest(), requestListener);
     }
 
     @Override
     public void onRefreshStarted(View view) {
         update();
     }
-
-
-
 }

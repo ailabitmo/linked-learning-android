@@ -6,4 +6,15 @@
     <string name="lecture">Лекции</string>
     <string name="terms">Термины</string>
 
+
+    <string name="drawer_open">Открыт</string>
+    <string name="drawer_close">Закрыт</string>
+
+
+    <string name="server_not_found">Сервер не доступен</string>
+
+    <string-array name="drawer_menu">
+        <item>Курсы</item>
+        <item>Термины</item>
+    </string-array>
 </resources>

@@ -30,6 +30,17 @@
     </option>
     <option name="selection" value="[Full]" />
   </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState>
+        <option name="device" value="2.7in QVGA" />
+        <option name="dockMode" value="" />
+        <option name="nightMode" value="notnight" />
+        <option name="targetHashString" value="android-17" />
+        <option name="theme" value="Theme.AppCompat" />
+      </GlobalState>
+    </option>
+  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Error" />
@@ -38,7 +49,7 @@
     <list default="true" id="c035860f-5ac5-4161-a3b5-2d813b817ef6" name="Default" comment="" />
     <ignored path="LinkedLearning.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380054648300" ignored="false" />
+    <file path="/Dummy.txt" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380834961379" ignored="false" />
     <file path="/WebServerTestActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1379961176711" ignored="false" />
     <file path="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/tests/WebService.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1379865435070" ignored="false" />
     <file path="/WebService.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1379963996257" ignored="false" />
@@ -52,21 +63,26 @@
     <file path="/RestService.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380744745091" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380745211735" ignored="false" />
     <file path="/a.dummy" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380055133164" ignored="false" />
-    <file path="/fragment.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380744791879" ignored="false" />
+    <file path="/fragment.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1381087898185" ignored="false" />
     <file path="/CourseOperation.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380217265950" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/com/ifmo/LinkedLearning/R.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380745270865" ignored="false" />
-    <file path="/CourseListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380220539016" ignored="false" />
-    <file path="/ModuleListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380823559093" ignored="false" />
+    <file path="/CourseListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380834418724" ignored="false" />
+    <file path="/ModuleListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380834503657" ignored="false" />
     <file path="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/tests/WebServerTestActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380136468440" ignored="false" />
-    <file path="/strings.xml" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380745267131" ignored="false" />
+    <file path="/strings.xml" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1381054511957" ignored="false" />
     <file path="/BaseOperation.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380222135763" ignored="false" />
     <file path="/LectureOperation.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380737722384" ignored="false" />
-    <file path="/LectureListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380823849696" ignored="false" />
+    <file path="/LectureListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380834540317" ignored="false" />
     <file path="$PROJECT_DIR$/../iosched/android/src/main/res/values/styles.xml" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380736834479" ignored="false" />
     <file path="/TermOperation.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380744712827" ignored="false" />
     <file path="/LectureActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380744971340" ignored="false" />
-    <file path="/TermListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380823880208" ignored="false" />
-    <file path="/BaseActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380823595178" ignored="false" />
+    <file path="/TermListActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380834563928" ignored="false" />
+    <file path="/BaseActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380834286182" ignored="false" />
+    <file path="/MainActivity.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1381057410950" ignored="false" />
+    <file path="/TermListFragment.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380971608206" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/ifmo/LinkedLearning/R.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380971808062" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1380971811151" ignored="false" />
+    <file path="/main_activity.xml" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1381053198792" ignored="false" />
+    <file path="/CourseListFragment.java" changelist="c035860f-5ac5-4161-a3b5-2d813b817ef6" time="1381057481825" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,38 +97,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestProvider.java" line="205" class="com.ifmo.LinkedLearning.model.RestProvider" package="com.ifmo.LinkedLearning.model">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/LectureListActivity.java" line="148" class="com.ifmo.LinkedLearning.ui.LectureListActivity" package="com.ifmo.LinkedLearning.ui">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -150,6 +134,38 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestProvider.java" line="205" class="com.ifmo.LinkedLearning.model.RestProvider" package="com.ifmo.LinkedLearning.model">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/LectureListActivity.java" line="144" class="com.ifmo.LinkedLearning.ui.LectureListActivity" package="com.ifmo.LinkedLearning.ui">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -159,21 +175,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ModuleListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/ModuleListActivity.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="79" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1814#1822#0" expanded="true" />
-              </folding>
+            <state line="10" column="38" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/BaseActivity.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="55" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+            <state line="76" column="26" selection-start="2923" selection-end="2923" vertical-scroll-proportion="1.0101781">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable/icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_drawer.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/ic_drawer.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drawer_shadow.9.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/drawer_shadow.9.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseListFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="59" selection-start="3293" selection-end="3363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,66 +226,38 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="88" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+            <state line="9" column="89" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="TermListFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/TermListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="32" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+            <state line="109" column="0" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestProvider.java">
+      <file leaf-file-name="main_activity.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main_activity.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="0" selection-start="6226" selection-end="6226" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestRequestManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestRequestManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="0" selection-start="3442" selection-end="3442" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TermListActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TermListActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/TermListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="25" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.8773842">
+            <state line="92" column="104" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LectureListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/LectureListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="10" selection-start="3594" selection-end="3594" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1771#1779#0" expanded="true" />
-                <element signature="e#4218#4778#0" expanded="true" />
-                <element signature="e#4767#4768#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -256,22 +272,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/operations/BaseOperation.java" />
-        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/operations/LectureOperation.java" />
-        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/Contract.java" />
-        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RequestFactory.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/operations/TermOperation.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestService.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/LectureActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestProvider.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/BaseListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/ModuleListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/LectureListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/TermListActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main_activity.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/TermListFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -307,7 +323,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,76 +339,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="linked" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linked" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linked" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linked" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,7 +384,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xxhdpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,13 +398,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="appcompat" />
+              <option name="myItemId" value="linked" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LinkedLearning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linked" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,15 +439,15 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
-    <property name="AndroidLayoutSelectedEditor" value="android-designer" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -487,6 +459,7 @@
       <recent name="C:\Users\Федор\Ubuntu\IWB-CE_v2.5.0.780\LinkedLearning\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\linked\res" />
       <recent name="D:\Development\linked\libs" />
       <recent name="C:\Users\Федор\Ubuntu\IWB-CE_v2.5.0.780\LinkedLearning\deps" />
     </key>
@@ -524,6 +497,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -549,19 +535,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -679,16 +652,17 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3713799" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5076661" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2469697" sideWeight="0.7052811" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29471892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2469697" sideWeight="0.7495741" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2504259" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7427598" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7427598" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.7052811" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48896435" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -760,95 +734,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-17/android.jar!/android/content/CursorLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/operations/LectureOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="43" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sdk/sources/android-18/android/app/LoaderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/Contract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="56" selection-start="2590" selection-end="2590" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RequestFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="32" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="88" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/operations/TermOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="87" selection-start="819" selection-end="819" vertical-scroll-proportion="-0.13975155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="42" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.36645964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestRequestManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="0" selection-start="3442" selection-end="3442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="55" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/ModuleListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="79" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1814#1822#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="161" column="0" selection-start="6226" selection-end="6226" vertical-scroll-proportion="0.0">
@@ -856,20 +741,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="63" selection-start="2719" selection-end="2826" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/model/RestRequestManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/ModuleListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="45" selection-start="2981" selection-end="2981" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/LectureListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="10" selection-start="3594" selection-end="3594" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1771#1779#0" expanded="true" />
-            <element signature="e#4218#4778#0" expanded="true" />
-            <element signature="e#4767#4768#0" expanded="true" />
-          </folding>
+        <state line="94" column="107" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/TermListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="25" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.8773842">
+        <state line="92" column="104" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="89" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/ic_drawer.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/drawer_shadow.9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/CourseListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="59" selection-start="3293" selection-end="3363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/TermListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ifmo/LinkedLearning/ui/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="26" selection-start="2923" selection-end="2923" vertical-scroll-proportion="1.0101781">
           <folding />
         </state>
       </provider>

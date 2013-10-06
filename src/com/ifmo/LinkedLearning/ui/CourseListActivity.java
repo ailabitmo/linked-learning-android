@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 import com.foxykeep.datadroid.requestmanager.Request;
 import com.foxykeep.datadroid.requestmanager.RequestManager;
 import com.ifmo.LinkedLearning.R;
@@ -84,12 +85,7 @@ public class CourseListActivity extends Activity implements PullToRefreshAttache
 
         void showError() {
             mPullToRefreshAttacher.setRefreshComplete();
-            AlertDialog.Builder builder = new AlertDialog.Builder(CourseListActivity.this);
-            builder.
-                    setTitle(android.R.string.dialog_alert_title).
-                    setMessage("Error data").
-                    create().
-                    show();
+            Toast.makeText(CourseListActivity.this, R.string.server_not_found, Toast.LENGTH_SHORT).show();
         }
 
         @Override
