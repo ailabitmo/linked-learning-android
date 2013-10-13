@@ -3,13 +3,18 @@ package com.ifmo.LinkedLearning.ui;
 import android.app.Fragment;
 import android.app.ListFragment;
 import android.app.LoaderManager;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 import com.foxykeep.datadroid.requestmanager.Request;
@@ -105,6 +110,11 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
         }
     };
 
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
     @Override
     public void onViewCreated (View view, Bundle savedInstanceState){
 
@@ -134,5 +144,20 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
     @Override
     public void onRefreshStarted(View view) {
         update();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.options_menu, menu);
+
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager =
+                (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView =
+                (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getActivity().getComponentName()));
+
     }
 }

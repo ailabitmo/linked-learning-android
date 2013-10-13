@@ -9,6 +9,7 @@ import android.app.Fragment;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -121,7 +122,10 @@ public class MainActivity extends Activity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        //menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
+        MenuItem item = menu.findItem(R.id.search);
+        if(item!=null)
+            item.setVisible(!drawerOpen);
+
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -135,6 +139,9 @@ public class MainActivity extends Activity {
                 break;
             case 1:
                 fragment = new TermListFragment();
+                break;
+            case 2:
+                fragment= new GraphWebFragment();
                 break;
         }
         // Insert the fragment by replacing any existing fragment
@@ -156,4 +163,6 @@ public class MainActivity extends Activity {
         mTitle = title;
         getActionBar().setTitle(mTitle);
     }
+
+
 }

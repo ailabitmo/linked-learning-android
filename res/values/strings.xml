@@ -10,11 +10,18 @@
     <string name="drawer_open">Открыт</string>
     <string name="drawer_close">Закрыт</string>
 
+    <string name="search_title">Поиск</string>
+
+    <string name="search_term_hint">Поиск в терминах</string>
+
+
+
 
     <string name="server_not_found">Сервер не доступен</string>
 
     <string-array name="drawer_menu">
         <item>Курсы</item>
         <item>Термины</item>
+        <item>Граф</item>
     </string-array>
 </resources>

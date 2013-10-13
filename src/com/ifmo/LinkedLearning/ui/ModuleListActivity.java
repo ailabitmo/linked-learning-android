@@ -37,6 +37,9 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 public class ModuleListActivity extends BaseActivity implements PullToRefreshAttacher.OnRefreshListener {
 
     public static final String MODULE_URI="com.ifmo.LinkedLearning.MODULE_URI";
+    public static final String MODULE_NAME="com.ifmo.LinkedLearning.MODULE_NAME";
+    public static final String MODULE_NUMBER="com.ifmo.LinkedLearning.MODULE_NUMBER";
+
 
     private static final String[] PROJECTION = {
             Contract.Modules._ID,
@@ -133,8 +136,15 @@ public class ModuleListActivity extends BaseActivity implements PullToRefreshAtt
                 Cursor c = ((SimpleCursorAdapter)adapterView.getAdapter()).getCursor();
                 c.moveToPosition(i);
                 String uri = c.getString(c.getColumnIndex(Contract.Modules.URI));
-                Intent intent = new Intent(view.getContext(), LectureListActivity.class);
+                String name = c.getString(c.getColumnIndex(Contract.Modules.NAME));
+                int number = c.getInt(c.getColumnIndex(Contract.Modules.NUMBER));
+
+                //Intent intent = new Intent(view.getContext(), LectureListActivity.class);
+                Intent intent = new Intent(view.getContext(), ModuleActivity.class);
                 intent.putExtra(MODULE_URI,uri);
+                intent.putExtra(MODULE_NAME,name);
+                intent.putExtra(MODULE_NUMBER,number);
+
                 startActivity(intent);
             }
         });
