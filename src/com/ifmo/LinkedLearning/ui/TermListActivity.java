@@ -63,7 +63,7 @@ public class TermListActivity extends BaseActivity implements PullToRefreshAttac
                     PROJECTION,
                     arg1.getString("SELECTION"),
                     null,
-                    null
+                    Contract.Term.NAME+" ASC"
             );
         }
 
@@ -121,7 +121,7 @@ public class TermListActivity extends BaseActivity implements PullToRefreshAttac
         adapter = new SimpleCursorAdapter(this,
                 R.layout.learning_list_item,
                 null,
-                new String[]{ Contract.Modules.NAME },
+                new String[]{ Contract.Term.NAME },
                 new int[]{ R.id.module_name },
                 0);
         listView.setAdapter(adapter);

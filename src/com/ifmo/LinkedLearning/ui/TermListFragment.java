@@ -64,7 +64,7 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
                     PROJECTION,
                     null,
                     null,
-                    null
+                    Contract.Term.NAME+" ASC"
             );
         }
 
