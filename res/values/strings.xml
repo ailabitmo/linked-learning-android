@@ -11,6 +11,9 @@
     <string name="drawer_close">Закрыт</string>
 
     <string name="search_title">Поиск</string>
+    <string name="download_pdf_title">Скачать PDF</string>
+    <string name="file_not_exist">Файл отсутствует</string>
+
 
     <string name="search_term_hint">Поиск в терминах</string>
 
@@ -22,6 +25,7 @@
     <string-array name="drawer_menu">
         <item>Курсы</item>
         <item>Термины</item>
+        <item>Литература</item>
         <item>Граф</item>
     </string-array>
 </resources>

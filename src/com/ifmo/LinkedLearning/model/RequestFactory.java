@@ -14,6 +14,8 @@ import com.foxykeep.datadroid.requestmanager.Request;
         public static final int REQUEST_COURSES = 2;
         public static final int REQUEST_LECTURE = 3;
         public static final int REQUEST_TERM = 4;
+        public static final int REQUEST_BIBO = 5;
+
 
 
     public static Request getCourseRequest() {
@@ -37,6 +39,11 @@ import com.foxykeep.datadroid.requestmanager.Request;
             Request request = new Request(REQUEST_TERM);
             return request;
         }
+
+    public static Request getBiboRequest() {
+        Request request = new Request(REQUEST_BIBO);
+        return request;
+    }
 
         private RequestFactory() {
         }

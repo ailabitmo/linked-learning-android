@@ -18,10 +18,13 @@ public final class TermOperation extends BaseOperation {
 
     @Override
     protected String buildQuery(Request request) {
-        return "SELECT ?"+ Contract.Term.URI+" ?"+Contract.Term.NAME+" ?"+Contract.Term.PARENT+" WHERE { \n" +
-                "?"+Contract.Term.URI+" rdf:type learningRu:Term .\n" +
-                "?"+Contract.Term.URI+"  learningRu:isTermOf ?"+ Contract.Term.PARENT+".\n" +
-                "?"+Contract.Term.URI+" rdfs:label ?"+Contract.Term.NAME+" . }";
+//        return "SELECT ?"+ Contract.Term.URI+" ?"+Contract.Term.NAME+" ?"+Contract.Term.PARENT+" WHERE { \n" +
+//                "?"+Contract.Term.URI+" rdf:type learningRu:Term .\n" +
+//                "?"+Contract.Term.URI+"  learningRu:isTermOf ?"+ Contract.Term.PARENT+".\n" +
+//                " OPTIONAL {?"+Contract.Term.URI+" rdfs:label ?"+Contract.Term.NAME+
+//                " . FILTER (langMatches(lang(?"+Contract.Term.NAME+"), \"ru\")) }" +
+//                " OPTIONAL {?"+Contract.Term.URI+" rdfs:label ?"+Contract.Term.NAME+" } }";
+        return SPARQLQueryHelper.queryALLTerms();
     }
 
     @Override

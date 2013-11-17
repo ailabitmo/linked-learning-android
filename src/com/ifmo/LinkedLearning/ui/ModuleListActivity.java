@@ -45,7 +45,8 @@ public class ModuleListActivity extends BaseActivity implements PullToRefreshAtt
             Contract.Modules._ID,
             Contract.Modules.NAME,
             Contract.Modules.URI,
-            Contract.Modules.NUMBER
+            Contract.Modules.NUMBER,
+            Contract.Modules.PARENT
 
     };
 
@@ -65,7 +66,7 @@ public class ModuleListActivity extends BaseActivity implements PullToRefreshAtt
                     ModuleListActivity.this,
                     Contract.Modules.CONTENT_URI,
                     PROJECTION,
-                    null,
+                    arg1.getString("SELECTION"),
                     null,
                     Contract.Modules.NUMBER+" ASC"
             );
@@ -149,7 +150,9 @@ public class ModuleListActivity extends BaseActivity implements PullToRefreshAtt
             }
         });
 
-        getLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
+        Bundle selection = new Bundle();
+        selection.putString("SELECTION",Contract.Lecture.PARENT+"='"+courseURI+"'");
+        getLoaderManager().initLoader(LOADER_ID, selection, loaderCallbacks);
         requestManager = RestRequestManager.from(this);
 
         mPullToRefreshAttacher = PullToRefreshAttacher.get(this);

@@ -19,6 +19,7 @@ public final class Contract {
         public static final String NAME = "name";
         public static final String URI = "uri";
         public static final String NUMBER = "number";
+        public static final String PARENT = "parent";
 
     }
 
@@ -52,6 +53,23 @@ public final class Contract {
 
     public static final class Term implements BaseColumns, TermColumns {
         public static final String CONTENT_PATH = "terms";
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(AUTHORITY_URI, CONTENT_PATH);
+        public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd." + AUTHORITY + "." + CONTENT_PATH;
+    }
+
+    public interface BiboColumns {
+        public static final String NAME = "name";
+        public static final String URI = "uri";
+        public static final String PARENT = "parent";
+
+        public static final String AUTHOR_LIST = "author_list";
+        public static final String PUBLICATION = "publication";
+        public static final String PDF = "pdf";
+
+    }
+
+    public static final class Bibo implements BaseColumns, BiboColumns {
+        public static final String CONTENT_PATH = "bibos";
         public static final Uri CONTENT_URI = Uri.withAppendedPath(AUTHORITY_URI, CONTENT_PATH);
         public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd." + AUTHORITY + "." + CONTENT_PATH;
     }

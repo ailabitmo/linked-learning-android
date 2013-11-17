@@ -26,6 +26,8 @@ public class RestProvider extends ContentProvider {
     private static final String TABLE_COURSES = "courses";
     private static final String TABLE_LECTURES = "lectures";
     private static final String TABLE_TERMS = "terms";
+    private static final String TABLE_BIBOS = "bibos";
+
 
 
 
@@ -39,6 +41,8 @@ public class RestProvider extends ContentProvider {
     private static final int PATH_COURSES= 2;
     private static final int PATH_LECTURES= 3;
     private static final int PATH_TERMS= 4;
+    private static final int PATH_BIBOS= 5;
+
 
 
 
@@ -48,8 +52,7 @@ public class RestProvider extends ContentProvider {
         sUriMatcher.addURI(Contract.AUTHORITY, Contract.Course.CONTENT_PATH, PATH_COURSES);
         sUriMatcher.addURI(Contract.AUTHORITY, Contract.Lecture.CONTENT_PATH, PATH_LECTURES);
         sUriMatcher.addURI(Contract.AUTHORITY, Contract.Term.CONTENT_PATH, PATH_TERMS);
-
-
+        sUriMatcher.addURI(Contract.AUTHORITY, Contract.Bibo.CONTENT_PATH, PATH_BIBOS);
     }
 
     private DatabaseHelper mDatabaseHelper;
@@ -67,7 +70,8 @@ public class RestProvider extends ContentProvider {
                             Contract.Modules._ID + " integer primary key autoincrement, " +
                             Contract.Modules.URI + " text, " +
                             Contract.Modules.NAME + " text, " +
-                            Contract.Modules.NUMBER + " integer" +
+                            Contract.Modules.NUMBER + " integer, " +
+                            Contract.Modules.PARENT + " text" +
                             ")";
             db.execSQL(sql);
 
@@ -83,10 +87,22 @@ public class RestProvider extends ContentProvider {
 
             sql =
                     "create table " + TABLE_TERMS + " (" +
-                            Contract.Lecture._ID + " integer primary key autoincrement, " +
-                            Contract.Lecture.URI + " text, " +
-                            Contract.Lecture.NAME + " text, " +
-                            Contract.Lecture.PARENT + " text" +
+                            Contract.Term._ID + " integer primary key autoincrement, " +
+                            Contract.Term.URI + " text, " +
+                            Contract.Term.NAME + " text, " +
+                            Contract.Term.PARENT + " text" +
+                            ")";
+            db.execSQL(sql);
+
+            sql =
+                    "create table " + TABLE_BIBOS + " (" +
+                            Contract.Bibo._ID + " integer primary key autoincrement, " +
+                            Contract.Bibo.URI + " text, " +
+                            Contract.Bibo.NAME + " text, " +
+                            Contract.Bibo.PARENT + " text, " +
+                            Contract.Bibo.AUTHOR_LIST + " text," +
+                            Contract.Bibo.PUBLICATION + " text," +
+                            Contract.Bibo.PDF + " text" +
                             ")";
             db.execSQL(sql);
 
@@ -131,6 +147,11 @@ public class RestProvider extends ContentProvider {
                 cursor.setNotificationUri(getContext().getContentResolver(), Contract.Term.CONTENT_URI);
                 return cursor;
             }
+            case PATH_BIBOS: {
+                Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_BIBOS, projection, selection, selectionArgs, null, null, sortOrder);
+                cursor.setNotificationUri(getContext().getContentResolver(), Contract.Bibo.CONTENT_URI);
+                return cursor;
+            }
             case PATH_COURSES: {
                 Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_COURSES, projection, selection, selectionArgs, null, null, sortOrder);
                 cursor.setNotificationUri(getContext().getContentResolver(), Contract.Course.CONTENT_URI);
@@ -150,6 +171,8 @@ public class RestProvider extends ContentProvider {
                 return Contract.Lecture.CONTENT_TYPE;
             case PATH_TERMS:
                 return Contract.Term.CONTENT_TYPE;
+            case PATH_BIBOS:
+                return Contract.Bibo.CONTENT_TYPE;
             case PATH_COURSES:
                 return Contract.Course.CONTENT_TYPE;
             default:
@@ -175,6 +198,11 @@ public class RestProvider extends ContentProvider {
                 getContext().getContentResolver().notifyChange(Contract.Term.CONTENT_URI, null);
                 break;
             }
+            case PATH_BIBOS: {
+                mDatabaseHelper.getWritableDatabase().insert(TABLE_BIBOS, null, values);
+                getContext().getContentResolver().notifyChange(Contract.Bibo.CONTENT_URI, null);
+                break;
+            }
             case PATH_COURSES: {
                 mDatabaseHelper.getWritableDatabase().insert(TABLE_COURSES, null, values);
                 getContext().getContentResolver().notifyChange(Contract.Course.CONTENT_URI, null);
@@ -193,6 +221,8 @@ public class RestProvider extends ContentProvider {
                 return mDatabaseHelper.getWritableDatabase().delete(TABLE_LECTURES, selection, selectionArgs);
             case PATH_TERMS:
                 return mDatabaseHelper.getWritableDatabase().delete(TABLE_TERMS, selection, selectionArgs);
+            case PATH_BIBOS:
+                return mDatabaseHelper.getWritableDatabase().delete(TABLE_BIBOS, selection, selectionArgs);
             case PATH_COURSES:
                 return mDatabaseHelper.getWritableDatabase().delete(TABLE_COURSES, selection, selectionArgs);
             default:

@@ -18,12 +18,15 @@ public final class LectureOperation extends BaseOperation {
 
     @Override
     protected String buildQuery(Request request) {
-        return "SELECT ?"+ Contract.Lecture.URI+" ?"+Contract.Lecture.NAME+" ?"
-                +Contract.Lecture.PARENT+" ?"+Contract.Lecture.NUMBER+" WHERE { \n" +
-                "?"+Contract.Lecture.URI+" rdf:type learningRu:Lecture .\n" +
-                "?"+Contract.Lecture.PARENT+" learningRu:hasLecture  ?"+Contract.Lecture.URI+" .\n" +
-                "?"+Contract.Lecture.URI+" learningRu:numberOfLecture  ?"+Contract.Lecture.NUMBER+" .\n" +
-                "?"+Contract.Lecture.URI+" rdfs:label ?"+Contract.Lecture.NAME+" . }";
+//        return "SELECT ?"+ Contract.Lecture.URI+" ?"+Contract.Lecture.NAME+" ?"
+//                +Contract.Lecture.PARENT+" ?"+Contract.Lecture.NUMBER+" WHERE { \n" +
+//                "?"+Contract.Lecture.URI+" rdf:type learningRu:Lecture .\n" +
+//                "?"+Contract.Lecture.PARENT+" learningRu:hasLecture  ?"+Contract.Lecture.URI+" .\n" +
+//                "?"+Contract.Lecture.URI+" learningRu:numberOfLecture  ?"+Contract.Lecture.NUMBER+" .\n" +
+//                " OPTIONAL {?"+Contract.Lecture.URI+" rdfs:label ?"+Contract.Lecture.NAME+
+//                " . FILTER (langMatches(lang(?"+Contract.Lecture.NAME+"), \"ru\")) }" +
+//                " OPTIONAL {?"+Contract.Lecture.URI+" rdfs:label ?"+Contract.Lecture.NAME+" } }";
+        return SPARQLQueryHelper.queryALLLectures();
     }
 
     @Override

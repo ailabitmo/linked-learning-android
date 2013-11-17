@@ -18,11 +18,15 @@ public final class ModuleOperation extends BaseOperation {
 
     @Override
     protected String buildQuery(Request request) {
-        return "SELECT ?"+ Contract.Modules.URI+" ?"+Contract.Modules.NAME+" ?"+Contract.Modules.NUMBER+" WHERE { \n" +
-                "?"+Contract.Modules.URI+" rdf:type aiiso:Module .\n" +
-                "<"+request.getString("courseURI")+">"+" learningRu:hasModule  ?"+Contract.Modules.URI+" .\n" +
-                "?"+Contract.Modules.URI+" learningRu:numberOfModule  ?"+Contract.Modules.NUMBER+" .\n" +
-                "?"+Contract.Modules.URI+" rdfs:label ?"+Contract.Modules.NAME+" . }";    }
+//        return "SELECT ?"+ Contract.Modules.URI+" ?"+Contract.Modules.NAME+" ?"+Contract.Modules.NUMBER+" WHERE { \n" +
+//                "?"+Contract.Modules.URI+" rdf:type aiiso:Module .\n" +
+//                "<"+request.getString("courseURI")+">"+" learningRu:hasModule  ?"+Contract.Modules.URI+" .\n" +
+//                "?"+Contract.Modules.URI+" learningRu:numberOfModule  ?"+Contract.Modules.NUMBER+" .\n" +
+//                " OPTIONAL {?"+Contract.Modules.URI+" rdfs:label ?"+Contract.Modules.NAME+
+//                " . FILTER (langMatches(lang(?"+Contract.Modules.NAME+"), \"ru\")) }" +
+//                " OPTIONAL {?"+Contract.Modules.URI+" rdfs:label ?"+Contract.Modules.NAME+" } }";
+        return SPARQLQueryHelper.queryALLModules();
+    }
 
     @Override
     protected ContentValues mapJSON(JSONObject object) throws JSONException {
@@ -30,6 +34,7 @@ public final class ModuleOperation extends BaseOperation {
         values.put(Contract.Modules.URI, object.getJSONObject(Contract.Modules.URI).getString("value"));
         values.put(Contract.Modules.NAME, object.getJSONObject(Contract.Modules.NAME).getString("value"));
         values.put(Contract.Modules.NUMBER, object.getJSONObject(Contract.Modules.NUMBER).getString("value"));
+        values.put(Contract.Modules.PARENT, object.getJSONObject(Contract.Modules.PARENT).getString("value"));
         return values;
     }
 

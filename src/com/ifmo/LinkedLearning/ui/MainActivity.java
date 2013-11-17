@@ -141,6 +141,9 @@ public class MainActivity extends Activity {
                 fragment = new TermListFragment();
                 break;
             case 2:
+                fragment= new BiboAllListFragment();
+                break;
+            case 3:
                 fragment= new GraphWebFragment();
                 break;
         }

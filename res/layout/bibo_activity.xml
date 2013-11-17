@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="4dp">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Название:"
+            android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:textStyle="bold"
+            android:layout_margin="4dp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Нет данных"
+            android:id="@+id/titleText" android:layout_gravity="left|center_vertical"
+            android:layout_margin="4dp"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Авторы:"
+            android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:textStyle="bold"
+            android:layout_margin="4dp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Нет данных"
+            android:id="@+id/authText" android:layout_gravity="left|center_vertical"
+            android:layout_margin="4dp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Опубликовано:"
+            android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:textStyle="bold"
+            android:layout_margin="4dp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Нет данных"
+            android:id="@+id/pubText" android:layout_gravity="left|center_vertical"
+            android:layout_margin="4dp"/>
+</LinearLayout>

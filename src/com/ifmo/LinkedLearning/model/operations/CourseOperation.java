@@ -18,9 +18,12 @@ public final class CourseOperation extends BaseOperation {
 
     @Override
     protected String buildQuery(Request request) {
-        return "SELECT ?"+ Contract.Course.URI+" ?"+Contract.Course.NAME+" WHERE { \n" +
-                "?"+Contract.Course.URI+" rdf:type aiiso:Course .\n" +
-                "?"+Contract.Course.URI+" rdfs:label ?"+Contract.Course.NAME+" . }";
+//        return "SELECT ?"+ Contract.Course.URI+" ?"+Contract.Course.NAME+" WHERE { \n" +
+//                "?"+Contract.Course.URI+" rdf:type aiiso:Course .\n" +
+//                " OPTIONAL {?"+Contract.Course.URI+" rdfs:label ?"+Contract.Course.NAME+
+//                " . FILTER (langMatches(lang(?"+Contract.Course.NAME+"), \"ru\")) }" +
+//                " OPTIONAL {?"+Contract.Course.URI+" rdfs:label ?"+Contract.Course.NAME+" } }";
+        return SPARQLQueryHelper.queryALLCourses();
     }
 
     @Override
