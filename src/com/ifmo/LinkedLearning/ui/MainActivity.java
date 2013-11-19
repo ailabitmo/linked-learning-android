@@ -2,14 +2,12 @@ package com.ifmo.LinkedLearning.ui;
 
 import android.app.Activity;
 import android.app.FragmentManager;
-import android.app.ListFragment;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -138,7 +136,7 @@ public class MainActivity extends Activity {
                 fragment = new CourseListFragment();
                 break;
             case 1:
-                fragment = new TermListFragment();
+                fragment = new TermAllListFragment();
                 break;
             case 2:
                 fragment= new BiboAllListFragment();

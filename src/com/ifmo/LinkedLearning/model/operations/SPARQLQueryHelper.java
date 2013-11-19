@@ -29,10 +29,17 @@ public class SPARQLQueryHelper {
     }
 
     public static String  queryALLLectures() {
-        return "SELECT ?uri ?name ?number ?parent WHERE {\n" +
+        return "SELECT ?uri ?name ?number ?parent ?video_id WHERE {\n" +
                 "        ?uri rdf:type learningRu:Lecture .\n" +
                 "   { ?parent learningRu:hasLecture ?uri } UNION { ?uri learningRu:isLectureOf  ?parent}\n" +
                 "        ?uri learningRu:numberOfLecture  ?number .\n" +
+                "   OPTIONAL{      \n" +
+                "      {SELECT ?video_id WHERE {\n" +
+                "            {?video learningRu:isResourceOf ?uri} \n" +
+                "            UNION { ?uri  learningRu:hasResource ?video}\n" +
+                "            ?video ma-ont:identifier ?video_id\n" +
+                "         } LIMIT 1}\n" +
+                "   }"+
                 "   OPTIONAL {?uri rdfs:label ?name . \n" +
                 "      FILTER (langMatches(lang(?name), \"ru\")) } \n" +
                 "   OPTIONAL {?uri rdfs:label ?name } }";

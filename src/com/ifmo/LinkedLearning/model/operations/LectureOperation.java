@@ -36,6 +36,12 @@ public final class LectureOperation extends BaseOperation {
         values.put(Contract.Lecture.NAME, object.getJSONObject(Contract.Lecture.NAME).getString("value"));
         values.put(Contract.Lecture.NUMBER, object.getJSONObject(Contract.Lecture.NUMBER).getString("value"));
         values.put(Contract.Lecture.PARENT, object.getJSONObject(Contract.Lecture.PARENT).getString("value"));
+        try{
+            values.put(Contract.Lecture.VIDEO_ID, object.getJSONObject(Contract.Lecture.VIDEO_ID).getString("value"));
+        }catch (JSONException e){
+            values.put(Contract.Lecture.VIDEO_ID, "");
+        }
+
         return values;
     }
 

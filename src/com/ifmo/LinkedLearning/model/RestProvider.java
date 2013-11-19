@@ -81,6 +81,7 @@ public class RestProvider extends ContentProvider {
                             Contract.Lecture.URI + " text, " +
                             Contract.Lecture.NAME + " text, " +
                             Contract.Lecture.NUMBER + " integer, " +
+                            Contract.Lecture.VIDEO_ID + " text, " +
                             Contract.Lecture.PARENT + " text" +
                             ")";
             db.execSQL(sql);

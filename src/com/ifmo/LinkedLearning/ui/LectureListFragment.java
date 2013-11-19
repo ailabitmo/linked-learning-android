@@ -37,7 +37,8 @@ public class LectureListFragment extends ListFragment implements PullToRefreshAt
             Contract.Lecture.NAME,
             Contract.Lecture.URI,
             Contract.Lecture.NUMBER,
-            Contract.Lecture.PARENT
+            Contract.Lecture.PARENT,
+            Contract.Lecture.VIDEO_ID
 
 
     };
@@ -49,6 +50,10 @@ public class LectureListFragment extends ListFragment implements PullToRefreshAt
 
     private static final int LOADER_ID = 3;
     public static final String LECTURE_URI="com.ifmo.LinkedLearning.LECTURE_URI";
+    public static final String LECTURE_NAME="com.ifmo.LinkedLearning.LECTURE_NAME";
+    public static final String LECTURE_VIDEO_ID="com.ifmo.LinkedLearning.LECTURE_VIDEO_ID";
+    public static final String LECTURE_NUMBER="com.ifmo.LinkedLearning.LECTURE_NUMBER";
+
 
     private String moduleURI;
 
@@ -125,9 +130,12 @@ public class LectureListFragment extends ListFragment implements PullToRefreshAt
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Cursor c = ((SimpleCursorAdapter)adapterView.getAdapter()).getCursor();
                 c.moveToPosition(i);
-                String uri = c.getString(c.getColumnIndex(Contract.Modules.URI));
-                Intent intent = new Intent(view.getContext(), TermListActivity.class);
-                intent.putExtra(LECTURE_URI,uri);
+                Intent intent = new Intent(view.getContext(), LectureActivity.class);
+                intent.putExtra(LECTURE_URI,c.getString(c.getColumnIndex(Contract.Lecture.URI)));
+                intent.putExtra(LECTURE_NAME,c.getString(c.getColumnIndex(Contract.Lecture.NAME)));
+                intent.putExtra(LECTURE_NUMBER,c.getInt(c.getColumnIndex(Contract.Lecture.NUMBER)));
+                intent.putExtra(LECTURE_VIDEO_ID,c.getString(c.getColumnIndex(Contract.Lecture.VIDEO_ID)));
+
                 startActivity(intent);
             }
         });

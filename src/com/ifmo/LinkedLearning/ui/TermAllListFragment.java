@@ -1,15 +1,17 @@
 package com.ifmo.LinkedLearning.ui;
 
-import android.content.Intent;
+import android.app.ListFragment;
+import android.app.LoaderManager;
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.Loader;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 import com.foxykeep.datadroid.requestmanager.Request;
@@ -30,9 +32,7 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 
 
 
-public class TermListFragment extends ListFragment implements PullToRefreshAttacher.OnRefreshListener {
-
-    private String lectureURI;
+public class TermAllListFragment extends ListFragment implements PullToRefreshAttacher.OnRefreshListener {
 
     private static final String[] PROJECTION = {
             Contract.Term._ID,
@@ -56,10 +56,10 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
         @Override
         public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
             return new CursorLoader(
-                    TermListFragment.this.getActivity(),
+                    TermAllListFragment.this.getActivity(),
                     Contract.Term.CONTENT_URI,
                     PROJECTION,
-                    arg1.getString("SELECTION"),
+                    null,
                     null,
                     Contract.Term.NAME+" ASC"
             );
@@ -88,7 +88,7 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
 
         void showError() {
             mPullToRefreshAttacher.setRefreshComplete();
-            Toast.makeText(TermListFragment.this.getActivity(), R.string.server_not_found, Toast.LENGTH_SHORT).show();
+            Toast.makeText(TermAllListFragment.this.getActivity(), R.string.server_not_found, Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -115,9 +115,6 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
     @Override
     public void onViewCreated (View view, Bundle savedInstanceState){
 
-        lectureURI = getArguments().getString(LectureListActivity.LECTURE_URI);
-
-
         adapter = new SimpleCursorAdapter(this.getActivity(),
                 R.layout.learning_list_item,
                 null,
@@ -126,17 +123,13 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
                 0);
         setListAdapter(adapter);
 
-        Bundle selection = new Bundle();
-        selection.putString("SELECTION",Contract.Term.PARENT+"='"+lectureURI+"'");
-        getLoaderManager().initLoader(LOADER_ID, selection, loaderCallbacks);
-
         getLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
         requestManager = RestRequestManager.from(this.getActivity());
 
 //        mPullToRefreshAttacher = PullToRefreshAttacher.get(this.getActivity());
 //        mPullToRefreshAttacher.addRefreshableView(getListView(), this);
 
-        mPullToRefreshAttacher = ((LectureActivity)this.getActivity()).getPullToRefreshAttacher();
+        mPullToRefreshAttacher = ((MainActivity)this.getActivity()).getPullToRefreshAttacher();
         mPullToRefreshAttacher.clearRefreshableViews();
         mPullToRefreshAttacher.addRefreshableView(getListView(), this);
     }
@@ -150,4 +143,18 @@ public class TermListFragment extends ListFragment implements PullToRefreshAttac
         update();
     }
 
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.options_menu, menu);
+
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager =
+                (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView =
+                (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getActivity().getComponentName()));
+
+    }
 }

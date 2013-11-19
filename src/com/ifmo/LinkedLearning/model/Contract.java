@@ -35,6 +35,8 @@ public final class Contract {
         public static final String URI = "uri";
         public static final String NUMBER = "number";
         public static final String PARENT = "parent";
+        public static final String VIDEO_ID = "video_id";
+
 
     }
 
